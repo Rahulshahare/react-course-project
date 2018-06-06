@@ -14,20 +14,21 @@ var template = (
             </ul>
             </div>
 );
-var user = {
-    name: 'Rahul',
-    age : 26,
-    Location: 'Pandharkawada'
+//Challenge time
+//create app object title/subtitle
+//use title/subtitle in the template
+//render template
+var app = {
+    title : 'Oceangreen Technology',
+    subtitle : 'We Work For Excellence'
 };
-var userName = "Wizkumar";
-var userAge = 26;
-var userLocation = 'Pandharkawada';
+
 
 var templateTwo = (
         <div>
-            <h1>{user.name}</h1>
-            <p>Age: {user.age}</p>
-            <p>Location: {user.Location}</p>
+            <h1>{app.title}</h1>
+            <p>{app.subtitle}</p>
+           
         </div>
 );
 var appRoot = document.getElementById('app');

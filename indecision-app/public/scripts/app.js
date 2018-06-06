@@ -42,14 +42,14 @@ var template = React.createElement(
         )
     )
 );
-var user = {
-    name: 'Rahul',
-    age: 26,
-    Location: 'Pandharkawada'
+//Challenge time
+//create app object title/subtitle
+//use title/subtitle in the template
+//render template
+var app = {
+    title: 'Oceangreen Technology',
+    subtitle: 'We Work For Excellence'
 };
-var userName = "Wizkumar";
-var userAge = 26;
-var userLocation = 'Pandharkawada';
 
 var templateTwo = React.createElement(
     'div',
@@ -57,19 +57,12 @@ var templateTwo = React.createElement(
     React.createElement(
         'h1',
         null,
-        user.name
+        app.title
     ),
     React.createElement(
         'p',
         null,
-        'Age: ',
-        user.age
-    ),
-    React.createElement(
-        'p',
-        null,
-        'Location: ',
-        user.Location
+        app.subtitle
     )
 );
 var appRoot = document.getElementById('app');
