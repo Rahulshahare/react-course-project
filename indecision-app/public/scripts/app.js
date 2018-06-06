@@ -43,13 +43,15 @@ var template = React.createElement(
     )
 );
 
+var userName = "Wizkumar";
+
 var templateTwo = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Rahul Shahare'
+        userName
     ),
     React.createElement(
         'p',

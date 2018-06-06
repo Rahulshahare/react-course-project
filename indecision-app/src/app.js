@@ -15,10 +15,11 @@ var template = (
             </div>
 );
 
+var userName = "Wizkumar";
 
 var templateTwo = (
         <div>
-            <h1>Rahul Shahare</h1>
+            <h1>{userName}</h1>
             <p>Age: 26</p>
             <p>Location: Pandharkawada</p>
         </div>
