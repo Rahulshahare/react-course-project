@@ -4,7 +4,7 @@ console.log('App.js is running');
 
 var template = (
             <div>
-            <h1>This is changing.</h1>
+            <h1>Rahul Shahare</h1>
             <p>More info</p>
             <ul>
                 <li>Hi this is one</li>
@@ -14,6 +14,22 @@ var template = (
             </ul>
             </div>
 );
+
+//ChallengeTIme
+//Create a templateTwo var JSX expression
+//wrap inside a  div
+//  h1 => Rahul Shahare
+//  p  => Age: 26
+//  p  => Location: Pandharkawada
+//then render the templateTwo var in render method  
+
+var templateTwo = (
+        <div>
+            <h1>Rahul Shahare</h1>
+            <p>Age: 26</p>
+            <p>Location: Pandharkawada</p>
+        </div>
+);
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template,appRoot); 
+ReactDOM.render(templateTwo,appRoot); 
