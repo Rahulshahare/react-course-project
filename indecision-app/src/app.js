@@ -16,12 +16,14 @@ var template = (
 );
 
 var userName = "Wizkumar";
+var userAge = 26;
+var userLocation = 'Pandharkawada';
 
 var templateTwo = (
         <div>
-            <h1>{userName.toUpperCase()}</h1>
-            <p>Age: 26</p>
-            <p>Location: Pandharkawada</p>
+            <h1>{userName}</h1>
+            <p>Age: {userAge}</p>
+            <p>Location: {userLocation}</p>
         </div>
 );
 var appRoot = document.getElementById('app');
