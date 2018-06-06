@@ -3,7 +3,7 @@
 console.log('App.js is running');
 
 //JSX = Javascript XML
-
+//Now Starting Conditional Rendering in JSX
 var template = React.createElement(
     'div',
     null,
@@ -51,6 +51,11 @@ var app = {
     subtitle: 'We Work For Excellence'
 };
 
+var app2 = {
+    title: 'Oceangreen Technology',
+    subtitle: 'We Work For Excellence'
+};
+
 var templateTwo = React.createElement(
     'div',
     null,
@@ -63,6 +68,16 @@ var templateTwo = React.createElement(
         'p',
         null,
         app.subtitle
+    ),
+    React.createElement(
+        'h1',
+        null,
+        app2.title
+    ),
+    React.createElement(
+        'p',
+        null,
+        app2.subtitle
     )
 );
 var appRoot = document.getElementById('app');
