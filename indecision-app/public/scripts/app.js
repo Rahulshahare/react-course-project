@@ -51,7 +51,7 @@ var templateTwo = React.createElement(
     React.createElement(
         'h1',
         null,
-        userName
+        userName.toUpperCase()
     ),
     React.createElement(
         'p',
