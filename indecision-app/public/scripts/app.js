@@ -7,7 +7,7 @@ console.log('App.js is running');
 var template = React.createElement(
   'h1',
   null,
-  'This is changing'
+  'This is changing.and this'
 );
 var appRoot = document.getElementById('app');
 
