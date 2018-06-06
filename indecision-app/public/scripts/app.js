@@ -42,7 +42,11 @@ var template = React.createElement(
         )
     )
 );
-
+var user = {
+    name: 'Rahul',
+    age: 26,
+    Location: 'Pandharkawada'
+};
 var userName = "Wizkumar";
 var userAge = 26;
 var userLocation = 'Pandharkawada';
