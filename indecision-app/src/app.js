@@ -25,9 +25,9 @@ var userLocation = 'Pandharkawada';
 
 var templateTwo = (
         <div>
-            <h1>{userName}</h1>
-            <p>Age: {userAge}</p>
-            <p>Location: {userLocation}</p>
+            <h1>{user.name}</h1>
+            <p>Age: {user.age}</p>
+            <p>Location: {user.Location}</p>
         </div>
 );
 var appRoot = document.getElementById('app');
