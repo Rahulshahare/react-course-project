@@ -14,29 +14,23 @@ var template = (
             </ul>
             </div>
 );
-//Challenge time
-//create app object title/subtitle
-//use title/subtitle in the template
-//render template
-var app = {
-    title : 'Oceangreen Technology',
-    subtitle : 'We Work For Excellence'
+
+var user = {
+   name:'Rahul Shahare',
+   age:26,
+   location:'Pandharkawada'
 };
 
-var app2 = {
-    title : 'Oceangreen Technology',
-    subtitle : 'We Work For Excellence'
-};
 
+function getLocation(){
+    return 'Unknown';
+}
 
 var templateTwo = (
         <div>
-            <h1>{app.title}</h1>
-            <p>{app.subtitle}</p>
-
-            <h1>{app2.title}</h1>
-            <p>{app2.subtitle}</p>
-           
+            <h1>{user.name}</h1>
+            <p>{user.age}</p>
+            <p>{getLocation()}</p>
         </div>
 );
 var appRoot = document.getElementById('app');
