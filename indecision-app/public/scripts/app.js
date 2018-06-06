@@ -49,8 +49,12 @@ var user = {
     location: 'Pandharkawada'
 };
 
-function getLocation() {
-    return 'Unknown';
+function getLocation(location) {
+    if (location) {
+        return location;
+    } else {
+        return 'Unknown';
+    }
 }
 
 var templateTwo = React.createElement(
@@ -69,7 +73,7 @@ var templateTwo = React.createElement(
     React.createElement(
         'p',
         null,
-        getLocation()
+        getLocation(user.location)
     )
 );
 var appRoot = document.getElementById('app');
