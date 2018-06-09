@@ -27,4 +27,9 @@ var getFirstName = function getFirstName(x) {
     return x.split(" ")[0];
 };
 
+var getFirstNameShorthand = function getFirstNameShorthand(x) {
+    return x.split(" ")[0];
+};
+
 console.log(getFirstName("rahul Shahare"));
+console.log(getFirstNameShorthand("Wiz Kumar"));

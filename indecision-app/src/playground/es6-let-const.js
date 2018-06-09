@@ -25,4 +25,7 @@ const getFirstName = (x) =>{
     return x.split(" ")[0];
 };
 
+const getFirstNameShorthand = (x) => x.split(" ")[0];
+
 console.log(getFirstName("rahul Shahare"));
+console.log(getFirstNameShorthand("Wiz Kumar"));
