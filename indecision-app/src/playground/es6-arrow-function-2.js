@@ -1,6 +1,6 @@
 //argument object - no longer bound with arrow functions
 
-const add = function(a,b){
+const add = (a,b) => {
     console.log(arguments);
     return a + b;
 };
