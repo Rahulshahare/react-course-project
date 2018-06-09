@@ -21,4 +21,8 @@ if (fullName){
     console.log(firstName);
 }
 
-console.log(firstName);
+const getFirstName = (x) =>{
+    return x.split(" ")[0];
+};
+
+console.log(getFirstName("rahul Shahare"));
