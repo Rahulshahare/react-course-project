@@ -3,5 +3,8 @@ var nameVar = 'TGOD';
 console.log('namevar', nameVar);
 
 let nameLet = "its ssaturday";
-let nameLet = "its Sunday";
+nameLet = "its Sunday";
 console.log('nameLet', nameLet);
+
+const nameConst = 'Taylor';
+console.log('nameConst', nameConst);
