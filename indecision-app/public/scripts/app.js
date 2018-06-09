@@ -46,7 +46,7 @@ var template = React.createElement(
 var user = {
     name: 'Rahul Shahare',
     age: 26,
-    location: 'Pandharkawada'
+    location: 'Pandharkawada, India'
 };
 
 function getLocation(location) {

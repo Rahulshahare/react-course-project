@@ -18,7 +18,7 @@ var template = (
 var user = {
    name:'Rahul Shahare',
    age:26,
-   location:'Pandharkawada'
+   location:'Pandharkawada, India'
 };
 
 
