@@ -1,7 +1,7 @@
 //ES5 function
-const square = function (x){
-    return x * x;
-};
+//const square = function (x){
+//    return x * x;
+//};
 
 function square(x){
     return x * x;
@@ -11,8 +11,10 @@ console.log(square(9));
 
 //ES6 Arrow Function
 
-const squareArrow = (x) =>{
-    return x * x;
-};
+//const squareArrow = (x) =>{
+//    return x * x;
+//};
+
+const squareArrow = (x) => x * x;
 
 console.log(squareArrow(5));
