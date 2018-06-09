@@ -13,3 +13,12 @@ console.log('nameConst', nameConst);
 //const can not reassign or redeclare
 
 //Block Scoping
+
+const fullName = 'Rahul Shahare';
+let firstName;
+if (fullName){
+    firstName = fullName.split(" ")[0];
+    console.log(firstName);
+}
+
+console.log(firstName);

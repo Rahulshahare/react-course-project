@@ -1,24 +1,26 @@
-"use strict";
+'use strict';
 
-//ES5 function
-//const square = function (x){
-//    return x * x;
-//};
+var nameVar = 'Wizkumar';
+var nameVar = 'TGOD';
+console.log('namevar', nameVar);
+//var can be reassign and redeclare
 
-function square(x) {
-    return x * x;
-};
+var nameLet = "its ssaturday";
+nameLet = "its Sunday";
+console.log('nameLet', nameLet);
+//let can be reassign but can not redeclare
 
-console.log(square(9));
+var nameConst = 'Taylor';
+console.log('nameConst', nameConst);
+//const can not reassign or redeclare
 
-//ES6 Arrow Function
+//Block Scoping
 
-//const squareArrow = (x) =>{
-//    return x * x;
-//};
+var fullName = 'Rahul Shahare';
+var firstName = void 0;
+if (fullName) {
+    firstName = fullName.split(" ")[0];
+    console.log(firstName);
+}
 
-var squareArrow = function squareArrow(x) {
-    return x * x;
-};
-
-console.log(squareArrow(5));
+console.log(firstName);
