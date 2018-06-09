@@ -15,11 +15,7 @@ var template = (
             </div>
 );
 
-var user = {
-   name:'Rahul Shahare',
-   age:25,
-   location:'Pandharkawada, India'
-};
+var user = {};
 
 
 function getLocation(location){
