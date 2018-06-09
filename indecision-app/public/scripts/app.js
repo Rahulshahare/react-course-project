@@ -27,9 +27,16 @@ var getFirstName = function getFirstName(x) {
     return x.split(" ")[0];
 };
 
-var getFirstNameShorthand = function getFirstNameShorthand(x) {
-    return x.split(" ")[0];
+var getFirstNameShorthand = function getFirstNameShorthand(x, y, z) {
+    return x.split(y)[z];
 };
+//usage 
+//getFirstNameShorthand("string","split key","needed arrow index");
+
 
 console.log(getFirstName("rahul Shahare"));
-console.log(getFirstNameShorthand("Wiz Kumar"));
+//console.log(getFirstNameShorthand("Wiz Kumar"));
+console.log(getFirstNameShorthand("Wiz Kumar", " ", 0));
+//returning wiz
+console.log(getFirstNameShorthand("Wiz,Kumar,young", ",", 1));
+//returning Kumar
