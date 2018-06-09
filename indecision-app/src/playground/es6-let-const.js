@@ -3,5 +3,5 @@ var nameVar = 'TGOD';
 console.log('namevar', nameVar);
 
 let nameLet = "its ssaturday";
-nameLet = "its Sunday";
+let nameLet = "its Sunday";
 console.log('nameLet', nameLet);
