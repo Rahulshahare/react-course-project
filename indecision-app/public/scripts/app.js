@@ -45,7 +45,7 @@ var template = React.createElement(
 
 var user = {
     name: 'Rahul Shahare',
-    age: 26,
+    age: 10,
     location: 'Pandharkawada, India'
 };
 
@@ -68,7 +68,7 @@ var templateTwo = React.createElement(
         null,
         user.name ? user.name : 'Anonymous'
     ),
-    React.createElement(
+    user.age >= 18 && React.createElement(
         'p',
         null,
         user.age
