@@ -2,48 +2,43 @@
 
 console.log('App.js is running');
 
-//JSX = Javascript XML
-//Now Starting Conditional Rendering in JSX
+//if statement
+//ternary operator
+//Logical and operator
+
+//Challenge
+//only render the subtitle (and p tag) if subtitle exits -
+// render new p tag - if options.length > 0 "Here are your options" "No Options"
+var app = {
+    title: 'Indicision App',
+    subtitle: 'Put your life in hands of computer',
+    options: ['one', 'two']
+};
 var template = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Rahul Shahare'
+        app.title
+    ),
+    app.subtitle && React.createElement(
+        'p',
+        null,
+        app.subtitle
     ),
     React.createElement(
         'p',
         null,
-        'More info'
-    ),
-    React.createElement(
-        'ul',
-        null,
-        React.createElement(
-            'li',
-            null,
-            'Hi this is one'
-        ),
-        React.createElement(
-            'li',
-            null,
-            'Hi this is two'
-        ),
-        React.createElement(
-            'li',
-            null,
-            'Hi this is three'
-        ),
-        React.createElement(
-            'li',
-            null,
-            'Hi this is four'
-        )
+        app.options.length > 0 ? "Here are your options" : "No Options"
     )
 );
 
-var user = {};
+var user = {
+    name: 'Rahul Shahare',
+    age: 25,
+    location: 'Pandharkawada, India'
+};
 
 function getLocation(location) {
     if (location) {
@@ -73,4 +68,4 @@ var templateTwo = React.createElement(
 );
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
