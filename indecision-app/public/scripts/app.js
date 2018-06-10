@@ -16,7 +16,7 @@ var user = {
     cities: ['pkd', 'mumbai', 'pune', 'NewCity'],
     printPlacesLived: function printPlacesLived() {
         var cityMessages = this.cities.map(function (city) {
-            return city;
+            return city + ' !';
         });
         return cityMessages;
     }
