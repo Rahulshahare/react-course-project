@@ -4,7 +4,7 @@ console.log('App.js is running');
 const app = {
     title : 'Indicision App',
     subtitle: 'Put your life in hands of computer',
-    options: ['one','two'],
+    options: [],
     data:'',
 }
 
