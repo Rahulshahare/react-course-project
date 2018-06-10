@@ -29,3 +29,22 @@ var user = {
 };
 
 console.log(user.printPlacesLived());
+
+//challenge area
+
+var multiplier = {
+    //number - array of number
+    //multiplyby -  single number
+    //multiply-  return a new aray where the numbers have been multiplied
+    number: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    multiplyBy: 2,
+    multipy: function multipy() {
+        var _this2 = this;
+
+        return this.number.map(function (number) {
+            return number * _this2.multiplyBy;
+        });
+    }
+};
+
+console.log(multiplier.multipy());
