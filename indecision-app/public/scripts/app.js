@@ -29,6 +29,16 @@ var template = React.createElement(
 );
 
 var count = 0;
+var addOne = function addOne() {
+    console.log("addOne");
+};
+
+var minusOne = function minusOne() {
+    console.log("minusOne");
+};
+var reset = function reset() {
+    console.log("Reset");
+};
 var templateTwo = React.createElement(
     'div',
     null,
@@ -40,15 +50,21 @@ var templateTwo = React.createElement(
     ),
     React.createElement(
         'button',
-        { id: 'my-id', className: 'myClass' },
+        { onClick: addOne },
         '+1'
     ),
     React.createElement(
         'button',
-        { id: 'my-id' },
+        { onClick: reset },
+        'Reset'
+    ),
+    React.createElement(
+        'button',
+        { onClick: minusOne },
         '-1'
     )
 );
+console.log(templateTwo);
 var appRoot = document.getElementById('app');
 
 ReactDOM.render(templateTwo, appRoot);
