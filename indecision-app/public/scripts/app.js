@@ -15,14 +15,11 @@ var user = {
     name: 'rahul',
     cities: ['pkd', 'mumbai', 'pune', 'NewCity'],
     printPlacesLived: function printPlacesLived() {
-        var _this = this;
-
-        console.log(this.name);
-        console.log(this.cities);
-        this.cities.forEach(function (city) {
-            console.log(_this.name + ' has lived in ' + city);
+        var cityMessages = this.cities.map(function (city) {
+            return city;
         });
+        return cityMessages;
     }
 };
 
-user.printPlacesLived();
+console.log(user.printPlacesLived());
