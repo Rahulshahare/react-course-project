@@ -19,17 +19,28 @@ var onFormSubmit = function onFormSubmit(e) {
         //console.log(option);
         app.options.push(option);
         e.target.elements.option.value = '';
-        renderApp();
+
         console.log(app.options);
-        //app.data = app.options.map((op)=>'<p>' + op + '</p>')
+        app.data = app.options.map(function (op) {
+            return React.createElement(
+                'p',
+                { key: op },
+                ' ',
+                op,
+                ' '
+            );
+        });
         //console.log(app.data);
+        renderApp();
     }
 };
 
 var removeAll = function removeAll() {
     app.options = [];
-    renderApp();
+    app.data = '', renderApp();
 };
+
+var numbers = [10, 20, 30];
 
 var appRoot = document.getElementById('app');
 var renderApp = function renderApp() {
@@ -51,21 +62,7 @@ var renderApp = function renderApp() {
             null,
             app.options.length > 0 ? "Here are your options" : "No Options"
         ),
-
-        //Arrays
-        [React.createElement(
-            'p',
-            { key: '1' },
-            'a'
-        ), React.createElement(
-            'p',
-            { key: '2' },
-            'b'
-        ), React.createElement(
-            'p',
-            { key: '3' },
-            'c'
-        )],
+        app.data,
         React.createElement(
             'p',
             null,

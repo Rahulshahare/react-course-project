@@ -17,19 +17,22 @@ const onFormSubmit = (e) =>{
         //console.log(option);
         app.options.push(option);
         e.target.elements.option.value = '';
-        renderApp();
+        
         console.log(app.options);
-        //app.data = app.options.map((op)=>'<p>' + op + '</p>')
+        app.data = app.options.map((op)=><p key={op}> { op } </p>);
         //console.log(app.data);
+        renderApp();
         
     }
 };
 
 const removeAll = () =>{
     app.options = [];
+    app.data = '',
     renderApp();
 };
 
+const numbers = [10, 20, 30];
 
 const appRoot = document.getElementById('app');
  const renderApp = () => {
@@ -38,12 +41,9 @@ const appRoot = document.getElementById('app');
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
-        {
-            //Arrays
-            [<p key="1">a</p>, <p key="2">b</p>, <p key="3">c</p>,]
-            
-        }
        
+        {app.data}
+        
         <p><button onClick={removeAll}>Remove All</button></p>
         <ol>
             <li>No of option are {app.options.length}</li>
