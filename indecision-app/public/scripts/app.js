@@ -65,7 +65,9 @@ var renderApp = function renderApp() {
             'p',
             null,
             'c'
-        )],
+        )]
+        //its warning on screen
+        ,
         React.createElement(
             'p',
             null,

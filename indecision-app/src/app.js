@@ -41,6 +41,7 @@ const appRoot = document.getElementById('app');
         {
             //Arrays
             [<p>a</p>, <p>b</p>, <p>c</p>,]
+            //its warning on screen
         }
        
         <p><button onClick={removeAll}>Remove All</button></p>
