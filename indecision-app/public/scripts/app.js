@@ -1,50 +1,65 @@
 'use strict';
 
-//argument object - no longer bound with arrow functions
+console.log('App.js is running');
 
-var add = function add(a, b) {
-    //console.log(arguments);
-    return a + b;
+//var let const
+var app = {
+    title: 'Indicision App',
+    subtitle: 'Put your life in hands of computer',
+    options: ['one', 'two']
 };
-
-console.log(add(55, 1));
-
-//this keyword - no longer bound
+var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        app.title
+    ),
+    app.subtitle && React.createElement(
+        'p',
+        null,
+        app.subtitle
+    ),
+    React.createElement(
+        'p',
+        null,
+        app.options.length > 0 ? "Here are your options" : "No Options"
+    )
+);
 
 var user = {
-    name: 'rahul',
-    cities: ['pkd', 'mumbai', 'pune', 'NewCity'],
-    printPlacesLived: function printPlacesLived() {
-        var _this = this;
-
-        //const cityMessages = this.cities.map((city)=>{
-        //    return this.name +' has been in ' + city;
-        //});
-        //const masg = cityMessages.length - 1;
-        //return cityMessages[];
-        return this.cities.map(function (city) {
-            return _this.name + ' has been in ' + city;
-        });
-    }
+    name: 'Rahul Shahare',
+    age: 25,
+    location: 'Pandharkawada, India'
 };
 
-console.log(user.printPlacesLived());
-
-//challenge area
-
-var multiplier = {
-    //number - array of number
-    //multiplyby -  single number
-    //multiply-  return a new aray where the numbers have been multiplied
-    number: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-    multiplyBy: 2,
-    multipy: function multipy() {
-        var _this2 = this;
-
-        return this.number.map(function (number) {
-            return number * _this2.multiplyBy;
-        });
+function getLocation(location) {
+    if (location) {
+        return React.createElement(
+            'p',
+            null,
+            'Location: ',
+            location
+        );
     }
-};
+}
 
-console.log(multiplier.multipy());
+var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        user.name ? user.name : 'Anonymous'
+    ),
+    user.age && user.age >= 18 && React.createElement(
+        'p',
+        null,
+        user.age
+    ),
+    getLocation(user.location)
+);
+var appRoot = document.getElementById('app');
+
+ReactDOM.render(template, appRoot);
