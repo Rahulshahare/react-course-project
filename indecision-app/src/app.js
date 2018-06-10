@@ -19,7 +19,7 @@ const onFormSubmit = (e) =>{
         e.target.elements.option.value = '';
         
         console.log(app.options);
-        app.data = app.options.map((op)=><p key={op}> { op } </p>);
+        app.data = app.options.map((op)=><li key={op}> { op } </li>);
         //console.log(app.data);
         renderApp();
         
@@ -41,12 +41,18 @@ const appRoot = document.getElementById('app');
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
-       
-        {app.data}
+        {
+          // numbers.map((number)=>{
+           //    return <p key={number}> Number: {number} </p>;
+           //})
+            
+        }
+        
         
         <p><button onClick={removeAll}>Remove All</button></p>
         <ol>
             <li>No of option are {app.options.length}</li>
+            {app.data}
         </ol>
         <form onSubmit={onFormSubmit}>
             <input type="text" name="option"/>

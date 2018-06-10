@@ -23,7 +23,7 @@ var onFormSubmit = function onFormSubmit(e) {
         console.log(app.options);
         app.data = app.options.map(function (op) {
             return React.createElement(
-                'p',
+                'li',
                 { key: op },
                 ' ',
                 op,
@@ -62,7 +62,6 @@ var renderApp = function renderApp() {
             null,
             app.options.length > 0 ? "Here are your options" : "No Options"
         ),
-        app.data,
         React.createElement(
             'p',
             null,
@@ -80,7 +79,8 @@ var renderApp = function renderApp() {
                 null,
                 'No of option are ',
                 app.options.length
-            )
+            ),
+            app.data
         ),
         React.createElement(
             'form',
