@@ -19,10 +19,17 @@ const onFormSubmit = (e) =>{
         e.target.elements.option.value = '';
         renderApp();
         console.log(app.options);
-        //app.data = app.options.map( (op) =>'<li>' + op + '</li>');
-        //console.log(app.data);
+        
     }
 };
+
+const removeAll = () =>{
+    app.options = [];
+    renderApp();
+};
+//challengeTime
+//create "Remove All" button above list
+//on click -> wipe the array -> rerender
 
 const appRoot = document.getElementById('app');
  const renderApp = () => {
@@ -31,7 +38,7 @@ const appRoot = document.getElementById('app');
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
-
+        <p><button onClick={removeAll}>Remove All</button></p>
         <ol>
             <li>No of option are {app.options.length}</li>
         </ol>

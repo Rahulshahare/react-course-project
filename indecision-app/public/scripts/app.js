@@ -21,10 +21,16 @@ var onFormSubmit = function onFormSubmit(e) {
         e.target.elements.option.value = '';
         renderApp();
         console.log(app.options);
-        //app.data = app.options.map( (op) =>'<li>' + op + '</li>');
-        //console.log(app.data);
     }
 };
+
+var removeAll = function removeAll() {
+    app.options = [];
+    renderApp();
+};
+//challengeTime
+//create "Remove All" button above list
+//on click -> wipe the array -> rerender
 
 var appRoot = document.getElementById('app');
 var renderApp = function renderApp() {
@@ -45,6 +51,15 @@ var renderApp = function renderApp() {
             'p',
             null,
             app.options.length > 0 ? "Here are your options" : "No Options"
+        ),
+        React.createElement(
+            'p',
+            null,
+            React.createElement(
+                'button',
+                { onClick: removeAll },
+                'Remove All'
+            )
         ),
         React.createElement(
             'ol',
