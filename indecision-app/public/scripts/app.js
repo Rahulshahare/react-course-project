@@ -15,10 +15,13 @@ var user = {
     name: 'rahul',
     cities: ['pkd', 'mumbai', 'pune', 'NewCity'],
     printPlacesLived: function printPlacesLived() {
+        var _this = this;
+
         var cityMessages = this.cities.map(function (city) {
-            return city + ' !';
+            return _this.name + ' has been in ' + city;
         });
-        return cityMessages;
+        var masg = cityMessages.length - 1;
+        return cityMessages[masg];
     }
 };
 

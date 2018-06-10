@@ -14,9 +14,10 @@ const user = {
     cities:['pkd','mumbai','pune','NewCity'],
     printPlacesLived(){
         const cityMessages = this.cities.map((city)=>{
-            return city + ' !';
+            return this.name +' has been in ' + city;
         });
-        return cityMessages;
+        const masg = cityMessages.length - 1;
+        return cityMessages[masg];
        
     }
 
