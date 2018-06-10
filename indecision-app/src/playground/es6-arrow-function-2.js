@@ -13,11 +13,11 @@ const user = {
     name:'rahul',
     cities:['pkd','mumbai','pune','NewCity'],
     printPlacesLived(){
-        const cityMessages = this.cities.map((city)=>{
+        return this.cities.map((city)=>{
             return this.name +' has been in ' + city;
         });
-        const masg = cityMessages.length - 1;
-        return cityMessages[masg];
+        //const masg = cityMessages.length - 1;
+        //return cityMessages[];
        
     }
 

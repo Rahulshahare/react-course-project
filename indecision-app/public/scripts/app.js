@@ -17,11 +17,11 @@ var user = {
     printPlacesLived: function printPlacesLived() {
         var _this = this;
 
-        var cityMessages = this.cities.map(function (city) {
+        return this.cities.map(function (city) {
             return _this.name + ' has been in ' + city;
         });
-        var masg = cityMessages.length - 1;
-        return cityMessages[masg];
+        //const masg = cityMessages.length - 1;
+        //return cityMessages[];
     }
 };
 
