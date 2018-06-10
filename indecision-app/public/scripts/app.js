@@ -23,7 +23,6 @@ var user = {
             console.log(_this.name + ' has lived in ' + city);
         });
     }
-
 };
 
 user.printPlacesLived();
