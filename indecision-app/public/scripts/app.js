@@ -28,38 +28,27 @@ var template = React.createElement(
     )
 );
 
-var user = {
-    name: 'Rahul Shahare',
-    age: 25,
-    location: 'Pandharkawada, India'
-};
-
-function getLocation(location) {
-    if (location) {
-        return React.createElement(
-            'p',
-            null,
-            'Location: ',
-            location
-        );
-    }
-}
-
+var count = 0;
 var templateTwo = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        user.name ? user.name : 'Anonymous'
+        'Count:',
+        count
     ),
-    user.age && user.age >= 18 && React.createElement(
-        'p',
-        null,
-        user.age
+    React.createElement(
+        'button',
+        { id: 'my-id' },
+        '+1'
     ),
-    getLocation(user.location)
+    React.createElement(
+        'button',
+        { id: 'my-id' },
+        '-1'
+    )
 );
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

@@ -14,26 +14,14 @@ const template = (
             </div>
 );
 
-const user = {
-   name:'Rahul Shahare',
-   age:25,
-   location:'Pandharkawada, India'
-};
-
-
-function getLocation(location){
-    if(location){
-        return <p>Location: {location}</p>;
-    }
-}
-
+let count = 0;
 const templateTwo = (
-        <div>
-            <h1>{ user.name ? user.name : 'Anonymous'}</h1>
-            {(user.age && user.age >= 18) && <p>{user.age}</p>}
-            {getLocation(user.location)}
-        </div>
-);
+    <div>
+        <h1>Count:{count}</h1>
+        <button id="my-id">+1</button>
+        <button id="my-id">-1</button>
+    </div>
+); 
 const appRoot = document.getElementById('app');
 
-ReactDOM.render(template,appRoot); 
+ReactDOM.render(templateTwo,appRoot); 
