@@ -19,6 +19,8 @@ const onFormSubmit = (e) =>{
         e.target.elements.option.value = '';
         renderApp();
         console.log(app.options);
+        app.data = app.options.map((op)=>'<p>' + op + '</p>')
+        console.log(app.data);
         
     }
 };
@@ -38,8 +40,9 @@ const appRoot = document.getElementById('app');
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
         {
             //Arrays
-            [98,99,97]
+            [98,99,97,'hello']
         }
+       {app.data}
         <p><button onClick={removeAll}>Remove All</button></p>
         <ol>
             <li>No of option are {app.options.length}</li>

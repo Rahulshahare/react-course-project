@@ -21,6 +21,10 @@ var onFormSubmit = function onFormSubmit(e) {
         e.target.elements.option.value = '';
         renderApp();
         console.log(app.options);
+        app.data = app.options.map(function (op) {
+            return '<p>' + op + '</p>';
+        });
+        console.log(app.data);
     }
 };
 
@@ -51,7 +55,8 @@ var renderApp = function renderApp() {
         ),
 
         //Arrays
-        [98, 99, 97],
+        [98, 99, 97, 'hello'],
+        app.data,
         React.createElement(
             'p',
             null,
