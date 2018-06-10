@@ -27,9 +27,7 @@ const removeAll = () =>{
     app.options = [];
     renderApp();
 };
-//challengeTime
-//create "Remove All" button above list
-//on click -> wipe the array -> rerender
+
 
 const appRoot = document.getElementById('app');
  const renderApp = () => {
@@ -38,6 +36,10 @@ const appRoot = document.getElementById('app');
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
+        {
+            //Arrays
+            [98,99,97]
+        }
         <p><button onClick={removeAll}>Remove All</button></p>
         <ol>
             <li>No of option are {app.options.length}</li>

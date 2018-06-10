@@ -28,9 +28,6 @@ var removeAll = function removeAll() {
     app.options = [];
     renderApp();
 };
-//challengeTime
-//create "Remove All" button above list
-//on click -> wipe the array -> rerender
 
 var appRoot = document.getElementById('app');
 var renderApp = function renderApp() {
@@ -52,6 +49,9 @@ var renderApp = function renderApp() {
             null,
             app.options.length > 0 ? "Here are your options" : "No Options"
         ),
+
+        //Arrays
+        [98, 99, 97],
         React.createElement(
             'p',
             null,
