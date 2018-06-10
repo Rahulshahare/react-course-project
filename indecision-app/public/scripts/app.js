@@ -55,19 +55,17 @@ var renderApp = function renderApp() {
         //Arrays
         [React.createElement(
             'p',
-            null,
+            { key: '1' },
             'a'
         ), React.createElement(
             'p',
-            null,
+            { key: '2' },
             'b'
         ), React.createElement(
             'p',
-            null,
+            { key: '3' },
             'c'
-        )]
-        //its warning on screen
-        ,
+        )],
         React.createElement(
             'p',
             null,
