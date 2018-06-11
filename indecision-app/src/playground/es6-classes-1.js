@@ -16,7 +16,9 @@ class Person {
 //Now making sub class of parent class
 
 class student extends Person{
-    
+    constructor(name,age,major){
+        this.major = major;
+    }
 }
 
 const me = new Person('Rahul Shahare',26);
