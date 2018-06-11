@@ -24,7 +24,8 @@ class student extends Person{
         return !!this.major;
     }
     getDescription() {
-        return 'Testing';
+        let description = super.getDescription();
+        return description ;
     }
 }
 
@@ -33,4 +34,5 @@ console.log(me.getDescription());
 
 const other = new student();
 console.log(other.getDescription());
+
 
