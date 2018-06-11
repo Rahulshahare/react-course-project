@@ -29,6 +29,11 @@ var render = function render() {
             'button',
             { onClick: toggleButton },
             app.buttonName
+        ),
+        app.buttonName === 'Show Details' ? '' : React.createElement(
+            'p',
+            null,
+            'See more details here'
         )
     );
 

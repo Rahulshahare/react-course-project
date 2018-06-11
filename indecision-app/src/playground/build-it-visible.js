@@ -19,6 +19,8 @@ const template = (
     <div>
         <h1>Visibility Toggle</h1>
         <button onClick={toggleButton}>{app.buttonName}</button>
+        {app.buttonName==='Show Details'? '' : <p>See more details here</p>}
+        
     </div>
 );
 
