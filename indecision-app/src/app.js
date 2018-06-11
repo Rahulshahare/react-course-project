@@ -35,6 +35,11 @@ const removeOption = (i) =>{
     console.log('hi '+app.options[i]);
 };
 
+const onMakeDecision = () =>{
+    const randomNum = Math.random(0,10);
+    console.log(randomNum);
+};
+
 const numbers = [10, 20, 30];
 
 const appRoot = document.getElementById('app');
@@ -44,10 +49,11 @@ const appRoot = document.getElementById('app');
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
+        <button onClick={onMakeDecision}>What should i do?</button>
         <p><button onClick={removeAll}>Remove All</button></p>
         {app.options.length}
         <ol>
-            {app.options.map((op,i)=><li key={i}> { op } <button onClick={removeOption =(i)=>{}}>x</button></li>)}
+            {app.options.map((op,i)=><li key={i}> { op } </li>)}
         </ol>
         <form onSubmit={onFormSubmit}>
             <input type="text" name="option"/>
