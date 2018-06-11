@@ -70,6 +70,20 @@ var student = function (_Person) {
     return student;
 }(Person);
 
+var Traveler = function (_Person2) {
+    _inherits(Traveler, _Person2);
+
+    function Traveler(name, age, homeLocation) {
+        _classCallCheck(this, Traveler);
+
+        var _this2 = _possibleConstructorReturn(this, (Traveler.__proto__ || Object.getPrototypeOf(Traveler)).call(this, name, age));
+
+        _this2.homeLocation = homeLocation;
+        return _this2;
+    }
+
+    return Traveler;
+}(Person);
 //Challenge Time
 //Traveler->Person
 //add support for homeLocation

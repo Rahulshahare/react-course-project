@@ -32,8 +32,15 @@ class student extends Person{
         }
         return description ;
     }
+
 }
 
+class Traveler extends Person {
+    constructor(name, age, homeLocation){
+        super(name, age);
+        this.homeLocation = homeLocation;
+    }
+}
 //Challenge Time
 //Traveler->Person
 //add support for homeLocation
