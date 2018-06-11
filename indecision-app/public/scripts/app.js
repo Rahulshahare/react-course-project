@@ -18,7 +18,7 @@ var Person = function () {
     _createClass(Person, [{
         key: 'getGreeting',
         value: function getGreeting() {
-            return 'Hello';
+            return 'Hello i am ' + this.name + '!';
         }
     }]);
 

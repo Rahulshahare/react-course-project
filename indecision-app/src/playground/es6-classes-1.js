@@ -6,7 +6,7 @@ class Person {
     }
 
     getGreeting(){
-        return 'Hello';
+        return 'Hello i am ' + this.name + '!';
     }
 }
 
