@@ -20,12 +20,14 @@ class student extends Person{
         super(name, age);
         this.major = major;
     }
+    hasMajor(){
+        return !!this.major;
+    }
 }
 
 const me = new student('Rahul Shahare',26, 'Computer Engineer');
-console.log(me);
+console.log(me.hasMajor());
 
-const other = new Person();
-console.log(other.getGreeting());
-console.log(other.getDescription());
+const other = new student();
+console.log(other.hasMajor());
 

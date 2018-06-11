@@ -48,12 +48,18 @@ var student = function (_Person) {
         return _this;
     }
 
+    _createClass(student, [{
+        key: 'hasMajor',
+        value: function hasMajor() {
+            return !!this.major;
+        }
+    }]);
+
     return student;
 }(Person);
 
 var me = new student('Rahul Shahare', 26, 'Computer Engineer');
-console.log(me);
+console.log(me.hasMajor());
 
-var other = new Person();
-console.log(other.getGreeting());
-console.log(other.getDescription());
+var other = new student();
+console.log(other.hasMajor());
