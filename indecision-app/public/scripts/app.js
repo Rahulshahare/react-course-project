@@ -74,7 +74,7 @@ var renderApp = function renderApp() {
         ),
         React.createElement(
             'button',
-            { onClick: onMakeDecision },
+            { disabled: app.options.length > 0 ? false : true, onClick: onMakeDecision },
             'What should i do?'
         ),
         app.options.length > 0 ? React.createElement(
@@ -86,7 +86,6 @@ var renderApp = function renderApp() {
                 'Remove All'
             )
         ) : '',
-        app.options.length,
         React.createElement(
             'ol',
             null,
