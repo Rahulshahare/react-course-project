@@ -30,6 +30,8 @@ var Person = function () {
     return Person;
 }();
 
+//Now making sub class of parent class
+
 var me = new Person('Rahul Shahare', 26);
 console.log(me.getGreeting());
 console.log(me.getDescription());
