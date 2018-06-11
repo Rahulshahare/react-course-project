@@ -51,7 +51,7 @@ const appRoot = document.getElementById('app');
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
-        <button disabled={app.options.length > 0 ? false : true} onClick={onMakeDecision}>What should i do?</button>
+        <button disabled={app.options.length === 0} onClick={onMakeDecision}>What should i do?</button>
         {/*app.options.length>0 ? <button onClick={onMakeDecision}>What should i do?</button> :''*/}
         {app.options.length>0 ? <p><button onClick={removeAll}>Remove All</button></p> :''}
         

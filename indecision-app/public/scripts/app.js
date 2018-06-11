@@ -74,7 +74,7 @@ var renderApp = function renderApp() {
         ),
         React.createElement(
             'button',
-            { disabled: app.options.length > 0 ? false : true, onClick: onMakeDecision },
+            { disabled: app.options.length === 0, onClick: onMakeDecision },
             'What should i do?'
         ),
         app.options.length > 0 ? React.createElement(
