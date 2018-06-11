@@ -26,12 +26,20 @@ class student extends Person{
     getDescription() {
         let description = super.getDescription();
 
-        if(this.hasMajor){
+        if(this.hasMajor()){
             description +=  ` Their major is ${this.major}.`;
+
         }
         return description ;
     }
 }
+
+//Challenge Time
+//Traveler->Person
+//add support for homeLocation
+//override getGretting
+//1. hi i am rahul shahare, i'm visiting from pkd
+//2. parent string
 
 const me = new student('Rahul Shahare',26, 'Computer Engineer');
 console.log(me.getDescription());

@@ -60,7 +60,7 @@ var student = function (_Person) {
         value: function getDescription() {
             var description = _get(student.prototype.__proto__ || Object.getPrototypeOf(student.prototype), 'getDescription', this).call(this);
 
-            if (this.hasMajor) {
+            if (this.hasMajor()) {
                 description += ' Their major is ' + this.major + '.';
             }
             return description;
@@ -69,6 +69,13 @@ var student = function (_Person) {
 
     return student;
 }(Person);
+
+//Challenge Time
+//Traveler->Person
+//add support for homeLocation
+//override getGretting
+//1. hi i am rahul shahare, i'm visiting from pkd
+//2. parent string
 
 var me = new student('Rahul Shahare', 26, 'Computer Engineer');
 console.log(me.getDescription());
