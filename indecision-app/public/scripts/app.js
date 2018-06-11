@@ -61,7 +61,7 @@ var student = function (_Person) {
             var description = _get(student.prototype.__proto__ || Object.getPrototypeOf(student.prototype), 'getDescription', this).call(this);
 
             if (this.hasMajor) {
-                description = description + (' Their major is ' + this.major + '.');
+                description += ' Their major is ' + this.major + '.';
             }
             return description;
         }
