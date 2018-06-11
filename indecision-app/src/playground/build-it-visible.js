@@ -1,14 +1,8 @@
-const app = {
-    buttonName:'Show Details',
-};
+
+let Visibility = false;
 
 const toggleButton = () => {
-    
-    if(app.buttonName==='Show Details'){
-        app.buttonName = 'Hide Details';
-    }else{
-        app.buttonName = 'Show Details';
-    }
+    Visibility = !Visibility;
     render();
 };
 
@@ -18,8 +12,12 @@ const render = () =>{
 const template = (
     <div>
         <h1>Visibility Toggle</h1>
-        <button onClick={toggleButton}>{app.buttonName}</button>
-        {app.buttonName==='Show Details'? '' : <p>See more details here</p>}
+        <button onClick={toggleButton}>{Visibility ? 'Hide Details' :'Show Details'}</button>
+        {Visibility && (
+            <div>
+                <p>Hey, You can check the details here!</p>
+            </div>
+        )}
         
     </div>
 );

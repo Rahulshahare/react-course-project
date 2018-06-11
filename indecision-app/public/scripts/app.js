@@ -1,16 +1,9 @@
 'use strict';
 
-var app = {
-    buttonName: 'Show Details'
-};
+var Visibility = false;
 
 var toggleButton = function toggleButton() {
-
-    if (app.buttonName === 'Show Details') {
-        app.buttonName = 'Hide Details';
-    } else {
-        app.buttonName = 'Show Details';
-    }
+    Visibility = !Visibility;
     render();
 };
 
@@ -28,12 +21,16 @@ var render = function render() {
         React.createElement(
             'button',
             { onClick: toggleButton },
-            app.buttonName
+            Visibility ? 'Hide Details' : 'Show Details'
         ),
-        app.buttonName === 'Show Details' ? '' : React.createElement(
-            'p',
+        Visibility && React.createElement(
+            'div',
             null,
-            'See more details here'
+            React.createElement(
+                'p',
+                null,
+                'Hey, You can check the details here!'
+            )
         )
     );
 
