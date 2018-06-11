@@ -71,16 +71,24 @@ var renderApp = function renderApp() {
                 'Remove All'
             )
         ),
+        app.options.length,
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'No of option are ',
-                app.options.length
-            ),
-            app.data
+            app.options.map(function (op, i) {
+                return React.createElement(
+                    'li',
+                    { key: i },
+                    ' ',
+                    op,
+                    ' ',
+                    React.createElement(
+                        'button',
+                        { onClick: removeOption },
+                        '*'
+                    )
+                );
+            })
         ),
         React.createElement(
             'form',

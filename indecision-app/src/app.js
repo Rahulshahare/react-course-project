@@ -50,9 +50,9 @@ const appRoot = document.getElementById('app');
         
         
         <p><button onClick={removeAll}>Remove All</button></p>
+        {app.options.length}
         <ol>
-            <li>No of option are {app.options.length}</li>
-            {app.data}
+            {app.options.map((op,i)=><li key={i}> { op } <button onClick={removeOption}>*</button></li>)}
         </ol>
         <form onSubmit={onFormSubmit}>
             <input type="text" name="option"/>
