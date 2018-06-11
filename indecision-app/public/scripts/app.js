@@ -53,13 +53,18 @@ var student = function (_Person) {
         value: function hasMajor() {
             return !!this.major;
         }
+    }, {
+        key: 'getDescription',
+        value: function getDescription() {
+            return 'Testing';
+        }
     }]);
 
     return student;
 }(Person);
 
 var me = new student('Rahul Shahare', 26, 'Computer Engineer');
-console.log(me.hasMajor());
+console.log(me.getDescription());
 
 var other = new student();
-console.log(other.hasMajor());
+console.log(other.getDescription());
