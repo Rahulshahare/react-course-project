@@ -4,7 +4,9 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-//
+//Challenge time
+//Setup the constructor to take name and age(default to 0)
+//getDescription - Rahul shahare is 26 year(s) old.
 
 var Person = function () {
     function Person() {
