@@ -5,23 +5,34 @@ var app = {
 };
 
 var toggleButton = function toggleButton() {
-    app.buttonName = 'Hide Detais';
+
+    if (app.buttonName === 'Show Details') {
+        app.buttonName = 'Hide Details';
+    } else {
+        app.buttonName = 'Show Details';
+    }
+    render();
 };
 
-var template = React.createElement(
-    'div',
-    null,
-    React.createElement(
-        'h1',
-        null,
-        'Visibility Toggle'
-    ),
-    React.createElement(
-        'button',
-        { onClick: toggleButton },
-        app.buttonName
-    )
-);
-
 var appRoot = document.getElementById('app');
-ReactDOM.render(template, appRoot);
+
+var render = function render() {
+    var template = React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'h1',
+            null,
+            'Visibility Toggle'
+        ),
+        React.createElement(
+            'button',
+            { onClick: toggleButton },
+            app.buttonName
+        )
+    );
+
+    ReactDOM.render(template, appRoot);
+};
+
+render();

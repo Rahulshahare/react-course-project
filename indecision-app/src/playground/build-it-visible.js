@@ -3,9 +3,18 @@ const app = {
 };
 
 const toggleButton = () => {
-    app.buttonName = 'Hide Detais'
+    
+    if(app.buttonName==='Show Details'){
+        app.buttonName = 'Hide Details';
+    }else{
+        app.buttonName = 'Show Details';
+    }
+    render();
 };
 
+const appRoot = document.getElementById('app');
+
+const render = () =>{
 const template = (
     <div>
         <h1>Visibility Toggle</h1>
@@ -13,5 +22,7 @@ const template = (
     </div>
 );
 
-const appRoot = document.getElementById('app');
 ReactDOM.render(template,appRoot); 
+};
+
+render();
