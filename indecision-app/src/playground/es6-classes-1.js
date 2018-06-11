@@ -1,8 +1,8 @@
 //
 
 class Person {
-    constructor(name){
-        this.name = name || 'Anynomous'
+    constructor(name  = 'Anynomous'){
+        this.name = name;
     }
 }
 

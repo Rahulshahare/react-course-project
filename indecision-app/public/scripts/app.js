@@ -4,10 +4,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 //
 
-var Person = function Person(name) {
+var Person = function Person() {
+    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Anynomous';
+
     _classCallCheck(this, Person);
 
-    this.name = name || 'Anynomous';
+    this.name = name;
 };
 
 var me = new Person('Rahul Shahare');
