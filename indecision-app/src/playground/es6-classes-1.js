@@ -40,6 +40,17 @@ class Traveler extends Person {
         super(name, age);
         this.homeLocation = homeLocation;
     }
+    hasHomeLocation(){
+        return !!this.homeLocation;
+    }
+    getGreeting(){
+        let greeting = super.getGreeting();
+        //console.log(greeting);
+        if(this.hasHomeLocation()) {
+            greeting += ` I'm Visiting from ${this.homeLocation}`;
+        }
+        return greeting;
+    }
 }
 //Challenge Time
 //Traveler->Person
@@ -48,10 +59,10 @@ class Traveler extends Person {
 //1. hi i am rahul shahare, i'm visiting from pkd
 //2. parent string
 
-const me = new student('Rahul Shahare',26, 'Computer Engineer');
-console.log(me.getDescription());
+const me = new Traveler('Rahul Shahare',26, 'Pandharkawada');
+console.log(me.getGreeting());
 
-const other = new student();
-console.log(other.getDescription());
+const other = new Traveler();
+console.log(other.getGreeting());
 
 

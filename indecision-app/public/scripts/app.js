@@ -82,6 +82,23 @@ var Traveler = function (_Person2) {
         return _this2;
     }
 
+    _createClass(Traveler, [{
+        key: 'hasHomeLocation',
+        value: function hasHomeLocation() {
+            return !!this.homeLocation;
+        }
+    }, {
+        key: 'getGreeting',
+        value: function getGreeting() {
+            var greeting = _get(Traveler.prototype.__proto__ || Object.getPrototypeOf(Traveler.prototype), 'getGreeting', this).call(this);
+            //console.log(greeting);
+            if (this.hasHomeLocation()) {
+                greeting += ' I\'m Visiting from ' + this.homeLocation;
+            }
+            return greeting;
+        }
+    }]);
+
     return Traveler;
 }(Person);
 //Challenge Time
@@ -91,8 +108,8 @@ var Traveler = function (_Person2) {
 //1. hi i am rahul shahare, i'm visiting from pkd
 //2. parent string
 
-var me = new student('Rahul Shahare', 26, 'Computer Engineer');
-console.log(me.getDescription());
+var me = new Traveler('Rahul Shahare', 26, 'Pandharkawada');
+console.log(me.getGreeting());
 
-var other = new student();
-console.log(other.getDescription());
+var other = new Traveler();
+console.log(other.getGreeting());
