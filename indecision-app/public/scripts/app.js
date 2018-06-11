@@ -51,9 +51,8 @@ var student = function (_Person) {
     return student;
 }(Person);
 
-var me = new Person('Rahul Shahare', 26);
-console.log(me.getGreeting());
-console.log(me.getDescription());
+var me = new student('Rahul Shahare', 26, 'Computer Engineer');
+console.log(me);
 
 var other = new Person();
 console.log(other.getGreeting());

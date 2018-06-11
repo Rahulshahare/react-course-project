@@ -22,9 +22,8 @@ class student extends Person{
     }
 }
 
-const me = new Person('Rahul Shahare',26);
-console.log(me.getGreeting());
-console.log(me.getDescription());
+const me = new student('Rahul Shahare',26, 'Computer Engineer');
+console.log(me);
 
 const other = new Person();
 console.log(other.getGreeting());
