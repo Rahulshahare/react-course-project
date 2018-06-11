@@ -36,8 +36,10 @@ const removeOption = (i) =>{
 };
 
 const onMakeDecision = () =>{
-    const randomNum = Math.random(0,10);
-    console.log(randomNum);
+    const randomNum = Math.floor(Math.random()*app.options.length);
+    const option = app.options[randomNum];
+    alert(option);
+    //console.log(randomNum);
 };
 
 const numbers = [10, 20, 30];
@@ -50,7 +52,8 @@ const appRoot = document.getElementById('app');
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{ app.options.length > 0 ? "Here are your options" : "No Options"}</p>
         <button onClick={onMakeDecision}>What should i do?</button>
-        <p><button onClick={removeAll}>Remove All</button></p>
+        {app.options.length>0 ? <p><button onClick={removeAll}>Remove All</button></p> :''}
+        
         {app.options.length}
         <ol>
             {app.options.map((op,i)=><li key={i}> { op } </li>)}

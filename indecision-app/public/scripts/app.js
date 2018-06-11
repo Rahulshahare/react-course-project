@@ -44,8 +44,10 @@ var removeOption = function removeOption(i) {
 };
 
 var onMakeDecision = function onMakeDecision() {
-    var randomNum = Math.random(0, 10);
-    console.log(randomNum);
+    var randomNum = Math.floor(Math.random() * app.options.length);
+    var option = app.options[randomNum];
+    alert(option);
+    //console.log(randomNum);
 };
 
 var numbers = [10, 20, 30];
@@ -75,7 +77,7 @@ var renderApp = function renderApp() {
             { onClick: onMakeDecision },
             'What should i do?'
         ),
-        React.createElement(
+        app.options.length > 0 ? React.createElement(
             'p',
             null,
             React.createElement(
@@ -83,7 +85,7 @@ var renderApp = function renderApp() {
                 { onClick: removeAll },
                 'Remove All'
             )
-        ),
+        ) : '',
         app.options.length,
         React.createElement(
             'ol',
