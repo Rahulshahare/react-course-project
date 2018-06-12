@@ -42,6 +42,7 @@ class Options extends React.Component{
         console.log(this.props.options.length);
         return(
             <div>
+            {this.props.options.map((option)=> <p key={option}>{option}</p>)}
             {this.props.options.length >0 ? 'Options are': 'No Options'}
                 <Option />
             </div>
