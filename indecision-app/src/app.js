@@ -20,14 +20,32 @@ class Action extends React.Component{
     }
 }
 
+class Options extends React.Component{
+    render() {
+        return(
+            <div>
+                <p>List of Options are here</p>
+            </div>
+        );
+    }
+}
 
-//Challenge time
-//Options - contain list ->Option
-//AddOption->
+class AddOption extends React.Component{
+    render() {
+        return(
+            <div>   
+                <p>You can add New option here</p>
+            </div>
+        );
+    }
+}
+
 const jsx = (
     <div>
         <Header/>
         <Action/>
+        <Options/>
+        <AddOption/>
     </div>
 );
 ReactDOM.render(jsx, document.getElementById('app'));
