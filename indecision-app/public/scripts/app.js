@@ -67,6 +67,11 @@ var Action = function (_React$Component2) {
     return Action;
 }(React.Component);
 
+//Challenge time
+//Options - contain list ->Option
+//AddOption->
+
+
 var jsx = React.createElement(
     'div',
     null,
