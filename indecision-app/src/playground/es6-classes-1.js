@@ -52,12 +52,7 @@ class Traveler extends Person {
         return greeting;
     }
 }
-//Challenge Time
-//Traveler->Person
-//add support for homeLocation
-//override getGretting
-//1. hi i am rahul shahare, i'm visiting from pkd
-//2. parent string
+
 
 const me = new Traveler('Rahul Shahare',26, 'Pandharkawada');
 console.log(me.getGreeting());
