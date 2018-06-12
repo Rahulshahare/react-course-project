@@ -28,7 +28,7 @@ var IndecisionApp = function (_React$Component) {
                 null,
                 React.createElement(Header, { title: title, subtitle: subtitle }),
                 React.createElement(Action, null),
-                React.createElement(Options, null),
+                React.createElement(Options, { options: options }),
                 React.createElement(AddOption, null)
             );
         }
@@ -109,10 +109,11 @@ var Options = function (_React$Component4) {
     _createClass(Options, [{
         key: 'render',
         value: function render() {
+            console.log(this.props.options.length);
             return React.createElement(
                 'div',
                 null,
-                'OptionsComponent here',
+                this.props.options.length > 0 ? 'Options are' : 'No Options',
                 React.createElement(Option, null)
             );
         }

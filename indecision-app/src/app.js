@@ -7,7 +7,7 @@ class IndecisionApp extends React.Component{
             <div>
                 <Header title={title} subtitle={subtitle}/>
                 <Action/>
-                <Options/>
+                <Options options={options}/>
                 <AddOption/>
             </div>
         );
@@ -39,9 +39,10 @@ class Action extends React.Component{
 
 class Options extends React.Component{
     render() {
+        console.log(this.props.options.length);
         return(
             <div>
-                OptionsComponent here
+            {this.props.options.length >0 ? 'Options are': 'No Options'}
                 <Option />
             </div>
         );
