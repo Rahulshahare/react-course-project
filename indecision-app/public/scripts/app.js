@@ -46,6 +46,7 @@ var Header = function (_React$Component2) {
     _createClass(Header, [{
         key: "render",
         value: function render() {
+            console.log(this.props);
             return React.createElement(
                 "div",
                 null,
