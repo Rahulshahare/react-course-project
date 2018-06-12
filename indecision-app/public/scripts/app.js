@@ -120,7 +120,6 @@ var Options = function (_React$Component4) {
                         option
                     );
                 }),
-                this.props.options.length > 0 ? 'Options are' : 'No Options',
                 React.createElement(Option, null)
             );
         }
