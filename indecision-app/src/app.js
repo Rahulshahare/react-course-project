@@ -28,10 +28,13 @@ class Header extends React.Component{
 }
 
 class Action extends React.Component{
+    handlePick(){
+        alert("Handle Pick")
+    }
     render(){
         return(
             <div>
-                <button>What Should i do?</button>
+                <button onClick={this.handlePick}>What Should i do?</button>
             </div>
         );
     }
