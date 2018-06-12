@@ -16,7 +16,7 @@ class Header extends React.Component{
         console.log(this.props);
         return(
             <div>
-                <h1>Indecision</h1>
+                <h1>{this.props.title}</h1>
                 <h2>Put Your life in the hands of Computer</h2>
             </div>
         );
