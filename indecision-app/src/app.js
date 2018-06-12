@@ -4,7 +4,7 @@ class Header extends React.Component{
        
     }
 }
-
+/*Uppercase convection*/ */
 const jsx = (
     <div>
         <h1>Title</h1>
