@@ -1,8 +1,9 @@
 class IndecisionApp extends React.Component{
     render(){
+        const title = 'Indecision';
         return(
             <div>
-                <Header title="Test Value"/>
+                <Header title={title}/>
                 <Action/>
                 <Options/>
                 <AddOption/>
