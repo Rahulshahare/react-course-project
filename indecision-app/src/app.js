@@ -9,6 +9,9 @@ const jsx = (
     <div>
         <h1>Title</h1>
         <Header/>
+        <Header/>
+        <Header/>
+        <Header/>
     </div>
 );
 ReactDOM.render(jsx, document.getElementById('app'));
