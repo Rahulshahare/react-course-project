@@ -1,17 +1,28 @@
 class Header extends React.Component{
     render() {
-        return  <p>This is from Header</p>;
+        return(
+            <div>
+                <h1>Indecision</h1>
+                <h2>Put Your life in the hands of Computer</h2>
+            </div>
+        );
        
     }
 }
-/*Uppercase convection*/ */
+
+class Action extends React.Component{
+    render(){
+        return(
+            <div>
+                <button>What Should i do?</button>
+            </div>
+        );
+    }
+}
 const jsx = (
     <div>
-        <h1>Title</h1>
         <Header/>
-        <Header/>
-        <Header/>
-        <Header/>
+        <Action/>
     </div>
 );
 ReactDOM.render(jsx, document.getElementById('app'));
