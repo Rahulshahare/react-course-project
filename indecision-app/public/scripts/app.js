@@ -102,6 +102,10 @@ var Action = function (_React$Component3) {
     return Action;
 }(React.Component);
 
+//Add Remove All Button
+//
+
+
 var Options = function (_React$Component4) {
     _inherits(Options, _React$Component4);
 
@@ -112,12 +116,22 @@ var Options = function (_React$Component4) {
     }
 
     _createClass(Options, [{
+        key: 'handleRemoveAll',
+        value: function handleRemoveAll() {
+            alert("Remove All handlers");
+        }
+    }, {
         key: 'render',
         value: function render() {
             console.log(this.props.options.length);
             return React.createElement(
                 'div',
                 null,
+                React.createElement(
+                    'button',
+                    { onClick: this.handleRemoveAll },
+                    'Remove All'
+                ),
                 this.props.options.map(function (option) {
                     return React.createElement(Option, { key: option, optionText: option });
                 })
