@@ -9,15 +9,32 @@ class Counter extends React.Component{
         };
     }
     handleAddOne(){
-        this.state.count = this.state.count + 1;
+       // this.state.count = this.state.count + 1;
+        this.setState((preState) => {
+            console.log(preState);
+           return {
+            count : preState.count + 1
+           };
+        });
         console.log(this.state);
         
     }
     handleMinusOne(){
-        console.log('Minus one');
+        this.setState((preState) => {
+            console.log(preState);
+           return {
+            count : preState.count - 1
+           };
+        });
+        console.log(this.state);
     }
     handleReset(){
         console.log('Reset');
+        this.setState( () => {
+            return{
+                count: 0
+            }
+        });
     }
     render(){
         return(
