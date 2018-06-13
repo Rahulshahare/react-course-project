@@ -21,7 +21,7 @@ class Counter extends React.Component{
     }
     handleMinusOne(){
         this.setState((preState) => {
-            console.log(preState);
+            console.log(preState.count);
            return {
             count : preState.count - 1
            };
@@ -34,7 +34,7 @@ class Counter extends React.Component{
             return{
                 count: 0
             }
-        });
+        });     
     }
     render(){
         return(
