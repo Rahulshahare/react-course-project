@@ -101,10 +101,6 @@ var Action = function (_React$Component3) {
 
     return Action;
 }(React.Component);
-//we have two way to bind the event handler
-//inline binding but dats not efficient, we cant use binding on every line of code
-//so we are using constructor for binding event handlers
-
 
 var Options = function (_React$Component4) {
     _inherits(Options, _React$Component4);
