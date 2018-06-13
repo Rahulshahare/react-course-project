@@ -39,7 +39,9 @@ class Action extends React.Component{
         );
     }
 }
-
+//we have two way to bind the event handler
+//inline binding but dats not efficient, we cant use binding on every line of code
+//so we are using constructor for binding event handlers
 class Options extends React.Component{
     constructor(props){
         super(props);
