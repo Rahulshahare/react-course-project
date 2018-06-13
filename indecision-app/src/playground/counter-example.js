@@ -1,11 +1,20 @@
 class Counter extends React.Component{
+    handleAddOne(){
+        console.log('Add One');
+    }
+    handleMinusOne(){
+        console.log('Minus one');
+    }
+    handleReset(){
+        console.log('Reset');
+    }
     render(){
         return(
             <div>
                 <h1>Count: </h1>
-                <button>+1</button>
-                <button>-1</button>
-                <button>Reset</button>                
+                <button onClick={this.handleAddOne}>+1</button>
+                <button onClick={this.handleMinusOne}>-1</button>
+                <button onClick={this.handleReset}>Reset</button>                
             </div>
         );
     }
