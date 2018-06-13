@@ -126,7 +126,7 @@ var Options = function (_React$Component4) {
                 null,
                 React.createElement(
                     'button',
-                    { onClick: this.handleRemoveAll },
+                    { onClick: this.handleRemoveAll.bind(this) },
                     'Remove All'
                 ),
                 this.props.options.map(function (option) {
