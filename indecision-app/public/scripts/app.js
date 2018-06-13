@@ -13,13 +13,30 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Visibility = function (_React$Component) {
     _inherits(Visibility, _React$Component);
 
-    function Visibility() {
+    function Visibility(props) {
         _classCallCheck(this, Visibility);
 
-        return _possibleConstructorReturn(this, (Visibility.__proto__ || Object.getPrototypeOf(Visibility)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Visibility.__proto__ || Object.getPrototypeOf(Visibility)).call(this, props));
+
+        _this.handleToggle = _this.handleToggle.bind(_this);
+        _this.state = {
+            visible: false
+        };
+
+        return _this;
     }
 
     _createClass(Visibility, [{
+        key: 'handleToggle',
+        value: function handleToggle() {
+            console.log('handleToggle');
+            this.setState(function (prevState) {
+                return {
+                    visible: !prevState.visible
+                };
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
@@ -32,8 +49,17 @@ var Visibility = function (_React$Component) {
                 ),
                 React.createElement(
                     'button',
+                    { onClick: this.handleToggle },
+                    this.state.visible ? 'Hide Details' : 'Show Details'
+                ),
+                this.state.visible && React.createElement(
+                    'div',
                     null,
-                    'Show/Hide'
+                    React.createElement(
+                        'p',
+                        null,
+                        'Hey, You can see details here'
+                    )
                 )
             );
         }
