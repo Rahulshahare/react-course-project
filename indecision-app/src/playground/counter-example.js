@@ -1,4 +1,4 @@
-let count = 0;
+/*let count = 0;
 const addOne = ()=>{
     console.log("addOne");
     count++;
@@ -31,4 +31,4 @@ const renderCounterApp = () =>{
 
 };
 
-renderCounterApp();
+renderCounterApp();*/
