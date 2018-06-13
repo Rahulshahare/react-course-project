@@ -102,10 +102,6 @@ var Action = function (_React$Component3) {
     return Action;
 }(React.Component);
 
-//Add Remove All Button
-//
-
-
 var Options = function (_React$Component4) {
     _inherits(Options, _React$Component4);
 
@@ -175,15 +171,31 @@ var AddOption = function (_React$Component6) {
     }
 
     _createClass(AddOption, [{
+        key: 'onFormSubmit',
+        value: function onFormSubmit(e) {
+            e.preventDefault();
+            var text = e.target.elements.option.value;
+            e.target.elements.option.value = '';
+            //console.log(text);
+            if (text) {
+                console.log(text);
+            }
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
                 'div',
                 null,
                 React.createElement(
-                    'p',
-                    null,
-                    'You can add New option here'
+                    'form',
+                    { onSubmit: this.onFormSubmit },
+                    React.createElement('input', { type: 'text', name: 'option' }),
+                    React.createElement(
+                        'button',
+                        null,
+                        'Add New Option'
+                    )
                 )
             );
         }

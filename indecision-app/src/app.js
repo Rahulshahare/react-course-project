@@ -40,8 +40,6 @@ class Action extends React.Component{
     }
 }
 
-//Add Remove All Button
-//
 class Options extends React.Component{
     handleRemoveAll() {
         alert("Remove All handlers");
@@ -69,10 +67,22 @@ class Option extends React.Component{
 
 
 class AddOption extends React.Component{
+    onFormSubmit (e){
+        e.preventDefault();
+        const text = e.target.elements.option.value;
+        e.target.elements.option.value = '';
+        //console.log(text);
+        if(text){
+            console.log(text);
+        }
+    }
     render() {
         return(
             <div>   
-                <p>You can add New option here</p>
+                <form onSubmit={this.onFormSubmit}>
+                <input type="text" name="option"/>
+                <button>Add New Option</button>
+                </form>
             </div>
         );
     }
