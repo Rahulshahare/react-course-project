@@ -42,7 +42,8 @@ class Action extends React.Component{
 
 class Options extends React.Component{
     handleRemoveAll() {
-        alert("Remove All handlers");
+        console.log(this.props.options);
+        //alert("Remove All handlers");
     }
     render() {
         console.log(this.props.options.length);
@@ -74,7 +75,7 @@ class AddOption extends React.Component{
         e.target.elements.option.value = '';
 
         if(text){
-            console.log(text);
+            alert(text);
         }
     }
     render() {

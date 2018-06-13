@@ -114,7 +114,8 @@ var Options = function (_React$Component4) {
     _createClass(Options, [{
         key: 'handleRemoveAll',
         value: function handleRemoveAll() {
-            alert("Remove All handlers");
+            console.log(this.props.options);
+            //alert("Remove All handlers");
         }
     }, {
         key: 'render',
@@ -179,7 +180,7 @@ var AddOption = function (_React$Component6) {
             e.target.elements.option.value = '';
 
             if (text) {
-                console.log(text);
+                alert(text);
             }
         }
     }, {
