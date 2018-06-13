@@ -23,7 +23,7 @@ class IndecisionApp extends React.Component{
     handleAddOption(option){
         if(!option){
             return 'Enter Valid Value to add item';
-        } elseif(this.state.options.indexOf(option) > -1){
+        } else if(this.state.options.indexOf(option) > -1){
             return 'This option already exits';
         }
 
@@ -122,16 +122,20 @@ class AddOption extends React.Component{
         const error = this.props.handleAddOption(text);
 
         this.setState(() =>{
-            
-        })
+            return{
+                error : error
+            };
+        });
         
     }
     render() {
         return(
-            <div>   
+            <div>  
+            {this.state.error && <p>{this.state.error}</p>}  
                 <form onSubmit={this.onFormSubmit}>
                 <input type="text" name="option"/>
                 <button>Add New Option</button>
+                
                 </form>
             </div>
         );
