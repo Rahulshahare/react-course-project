@@ -217,12 +217,15 @@ var AddOption = function (_React$Component2) {
             e.preventDefault();
 
             var text = e.target.elements.option.value.trim();
-            e.target.elements.option.value = '';
+
             var error = this.props.handleAddOption(text);
 
             this.setState(function () {
                 return { error: error };
             });
+            if (!error) {
+                e.target.elements.option.value = '';
+            }
         }
     }, {
         key: 'render',

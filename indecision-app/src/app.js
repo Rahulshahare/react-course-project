@@ -155,11 +155,14 @@ class AddOption extends React.Component{
         e.preventDefault();
 
         const text = e.target.elements.option.value.trim();
-        e.target.elements.option.value = '';
+        
         const error = this.props.handleAddOption(text);
 
         
         this.setState ( () => ({error: error}));
+        if(!error){
+            e.target.elements.option.value = '';
+        }
     }
     render() {
         return(
