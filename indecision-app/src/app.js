@@ -53,19 +53,26 @@ class IndecisionApp extends React.Component{
         );
     }
 }
-
-class Header extends React.Component{
-    render() {
-        console.log(this.props);
-        return(
-            <div className="header">
-                <h1>{this.props.title}</h1>
-                <h2>{this.props.subtitle}</h2>
-            </div>
-        );
+const Header = (props) => {
+    return(
+        <div className="header">
+            <h1>{props.title}</h1>
+            <h2>{props.subtitle}</h2>
+        </div>
+    );
+};
+// class Header extends React.Component{
+//     render() {
+//         console.log(this.props);
+//         return(
+//             <div className="header">
+//                 <h1>{this.props.title}</h1>
+//                 <h2>{this.props.subtitle}</h2>
+//             </div>
+//         );
        
-    }
-}
+//     }
+// }
 const Action = (props) => {
     return(
         <div className="action">
