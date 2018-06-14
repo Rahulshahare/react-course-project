@@ -16,6 +16,10 @@ class IndecisionApp extends React.Component{
     componentDidUpdate(prevProps, prevState) {
         console.log('ComponentDidUpdate');
     }
+    componentwillUnmount(){
+        console.log('componentWillunmount');
+        //it fires when component is getting out of screen
+    }
     handleDeleteOptions() {
          this.setState( () =>({ options: [] }));
     }

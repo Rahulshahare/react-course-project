@@ -38,6 +38,12 @@ var IndecisionApp = function (_React$Component) {
             console.log('ComponentDidUpdate');
         }
     }, {
+        key: 'componentwillUnmount',
+        value: function componentwillUnmount() {
+            console.log('componentWillunmount');
+            //it fires when component is getting out of screen
+        }
+    }, {
         key: 'handleDeleteOptions',
         value: function handleDeleteOptions() {
             this.setState(function () {
