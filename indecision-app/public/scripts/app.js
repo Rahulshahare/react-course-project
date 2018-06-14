@@ -96,18 +96,7 @@ var Header = function Header(props) {
         )
     );
 };
-// class Header extends React.Component{
-//     render() {
-//         console.log(this.props);
-//         return(
-//             <div className="header">
-//                 <h1>{this.props.title}</h1>
-//                 <h2>{this.props.subtitle}</h2>
-//             </div>
-//         );
 
-//     }
-// }
 var Action = function Action(props) {
     return React.createElement(
         'div',
@@ -122,22 +111,6 @@ var Action = function Action(props) {
         )
     );
 };
-
-// class Action extends React.Component{
-
-//     render(){
-//         return(
-//             <div className="action">
-//                 <button
-//                  onClick={this.props.handlePick}
-//                  disabled={!this.props.hasOptions}
-//                  >
-//                  What Should i do?
-//                  </button>
-//             </div>
-//         );
-//     }
-// }
 
 var Options = function Options(props) {
     return React.createElement(
@@ -157,23 +130,6 @@ var Options = function Options(props) {
     );
 };
 
-// class Options extends React.Component{
-
-//     render() {
-//         //console.log(this.props.options.length);
-//         return(
-//             <div className="options">
-//                 <button 
-//                     onClick={this.props.handleDeleteOptions}
-//                     disabled={!this.props.hasOptions}
-//                 >
-//                     Remove All
-//                 </button>
-//                 {this.props.options.map((option)=> <Option key={option} optionText={option}/> )}
-//             </div>
-//         );
-//     }
-// }
 var Option = function Option(props) {
     return React.createElement(
         'div',
@@ -181,16 +137,6 @@ var Option = function Option(props) {
         props.optionText
     );
 };
-// class Option extends React.Component{
-//     render(){
-//         return(
-//             <div className="option">
-//                 {this.props.optionText}
-//             </div>
-//         );
-//     }
-// }
-
 
 var AddOption = function (_React$Component2) {
     _inherits(AddOption, _React$Component2);
@@ -249,16 +195,5 @@ var AddOption = function (_React$Component2) {
 
     return AddOption;
 }(React.Component);
-
-// const User = (props) => {
-//    // console.log(props);
-//     return(
-//         <div>
-//             <p>Name: {props.name}</p>
-//             <p>Age: {props.age}</p>            
-//         </div>
-//     );
-// };
-
 
 ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
