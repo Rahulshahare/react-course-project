@@ -96,7 +96,7 @@ Counter.defaultProps = {
     count: 0
 };
 
-ReactDOM.render(React.createElement(Counter, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(Counter, { count: 102 }), document.getElementById('app'));
 /*let count = 0;
 const addOne = ()=>{
     console.log("addOne");
