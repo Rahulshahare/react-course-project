@@ -24,11 +24,8 @@ class IndecisionApp extends React.Component{
             return 'This option already exits';
         }
 
-        this.setState((prevState) =>{
-            return{
-                options: prevState.options.concat([option])
-            };
-        });
+        this.setState( (prevState) => ({options : prevState.options.concat([option])}))
+        
     }
 
     render(){
@@ -119,7 +116,6 @@ class AddOption extends React.Component{
 
         
         this.setState ( () => ({error: error}));
-        
     }
     render() {
         return(
