@@ -54,7 +54,7 @@ class IndecisionApp extends React.Component{
     }
 }
 IndecisionApp.defaultProps = {
-    options:['one']
+    options:[]
 };
 const Header = (props) => {
     return(
@@ -142,5 +142,5 @@ class AddOption extends React.Component{
     }
 }
 
-ReactDOM.render(<IndecisionApp/>, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp options={['one','two']}/>, document.getElementById('app'));
 

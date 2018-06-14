@@ -81,7 +81,7 @@ var IndecisionApp = function (_React$Component) {
 }(React.Component);
 
 IndecisionApp.defaultProps = {
-    options: ['one']
+    options: []
 };
 var Header = function Header(props) {
     return React.createElement(
@@ -203,4 +203,4 @@ var AddOption = function (_React$Component2) {
     return AddOption;
 }(React.Component);
 
-ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(IndecisionApp, { options: ['one', 'two'] }), document.getElementById('app'));
