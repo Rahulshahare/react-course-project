@@ -89,7 +89,7 @@ var Header = function Header(props) {
             null,
             props.title
         ),
-        React.createElement(
+        props.subtitle && React.createElement(
             'h2',
             null,
             props.subtitle
@@ -97,8 +97,8 @@ var Header = function Header(props) {
     );
 };
 Header.defaultProps = {
-    title: 'some default title',
-    subtitle: 'some default subtitle'
+    title: 'some default title'
+
 };
 
 var Action = function Action(props) {
