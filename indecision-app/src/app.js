@@ -1,4 +1,4 @@
-//stateless functional component
+//LifeCycle method
 class IndecisionApp extends React.Component{
     constructor(props){
         super(props);
@@ -114,7 +114,8 @@ const Option = (props) => {
                 props.handleDeleteOption(props.optionText);
             }}
             >
-            remove</button>
+            remove
+            </button>
         </div>
     );
 };
