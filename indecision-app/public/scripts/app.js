@@ -71,9 +71,7 @@ var IndecisionApp = function (_React$Component) {
                     options: this.state.options,
                     hasOptions: this.state.options.length > 0,
                     handleDeleteOptions: this.handleDeleteOptions }),
-                React.createElement(AddOption, {
-                    handleAddOption: this.handleAddOption
-                })
+                React.createElement(AddOption, { handleAddOption: this.handleAddOption })
             );
         }
     }]);
@@ -96,7 +94,7 @@ var Header = function (_React$Component2) {
             console.log(this.props);
             return React.createElement(
                 'div',
-                null,
+                { className: 'header' },
                 React.createElement(
                     'h1',
                     null,
@@ -128,7 +126,7 @@ var Action = function (_React$Component3) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'action' },
                 React.createElement(
                     'button',
                     {
@@ -159,7 +157,7 @@ var Options = function (_React$Component4) {
             //console.log(this.props.options.length);
             return React.createElement(
                 'div',
-                null,
+                { className: 'options' },
                 React.createElement(
                     'button',
                     {
@@ -192,7 +190,7 @@ var Option = function (_React$Component5) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'option' },
                 this.props.optionText
             );
         }
@@ -236,7 +234,7 @@ var AddOption = function (_React$Component6) {
         value: function render() {
             return React.createElement(
                 'div',
-                null,
+                { className: 'addoption' },
                 this.state.error && React.createElement(
                     'p',
                     null,

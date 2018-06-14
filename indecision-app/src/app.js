@@ -46,9 +46,8 @@ class IndecisionApp extends React.Component{
                     options={this.state.options}
                     hasOptions={this.state.options.length > 0}
                     handleDeleteOptions={this.handleDeleteOptions}/>
-                <AddOption
-                handleAddOption={this.handleAddOption}
-                />
+                <AddOption handleAddOption={this.handleAddOption} />
+               
             </div>
         );
     }
@@ -58,7 +57,7 @@ class Header extends React.Component{
     render() {
         console.log(this.props);
         return(
-            <div>
+            <div className="header">
                 <h1>{this.props.title}</h1>
                 <h2>{this.props.subtitle}</h2>
             </div>
@@ -71,7 +70,7 @@ class Action extends React.Component{
     
     render(){
         return(
-            <div>
+            <div className="action">
                 <button
                  onClick={this.props.handlePick}
                  disabled={!this.props.hasOptions}
@@ -88,7 +87,7 @@ class Options extends React.Component{
     render() {
         //console.log(this.props.options.length);
         return(
-            <div>
+            <div className="options">
                 <button 
                     onClick={this.props.handleDeleteOptions}
                     disabled={!this.props.hasOptions}
@@ -104,7 +103,7 @@ class Options extends React.Component{
 class Option extends React.Component{
     render(){
         return(
-            <div>
+            <div className="option">
                 {this.props.optionText}
             </div>
         );
@@ -136,7 +135,7 @@ class AddOption extends React.Component{
     }
     render() {
         return(
-            <div>  
+            <div className="addoption">  
             {this.state.error && <p>{this.state.error}</p>}  
                 <form onSubmit={this.onFormSubmit}>
                 <input type="text" name="option"/>
