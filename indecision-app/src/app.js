@@ -91,7 +91,13 @@ const Options = (props) => {
             >
                 Remove All
             </button>
-            {props.options.map((option)=> <Option key={option} optionText={option}/> )}
+            {props.options.map((option)=> 
+                <Option 
+                    key={option} 
+                    optionText={option}
+                    handleDeleteOption = {props.handleDeleteOption}    
+                    /> 
+            )}  
         </div>
     );
 };
@@ -101,6 +107,12 @@ const Option = (props) => {
     return(
         <div className="option">
             {props.optionText}
+            <button 
+            onClick={ () => {
+                props.handleDeleteOption(props.optionText);
+            }}
+            >
+            remove</button>
         </div>
     );
 };
