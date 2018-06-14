@@ -52,12 +52,6 @@ var IndecisionApp = function (_React$Component) {
             this.setState(function (prevState) {
                 return { options: prevState.options.concat([option]) };
             });
-
-            // this.setState((prevState) =>{
-            //     return{
-            //         options: prevState.options.concat([option])
-            //     };
-            // }); //One of two above
         }
     }, {
         key: 'render',
