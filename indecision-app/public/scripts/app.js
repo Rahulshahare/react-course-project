@@ -8,7 +8,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-//Using Local Storag
+//Using Local Storage
 var IndecisionApp = function (_React$Component) {
     _inherits(IndecisionApp, _React$Component);
 
@@ -30,12 +30,16 @@ var IndecisionApp = function (_React$Component) {
     _createClass(IndecisionApp, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            console.log('ComponentDidMount');
+            console.log('fetching data');
         }
     }, {
         key: 'componentDidUpdate',
         value: function componentDidUpdate(prevProps, prevState) {
-            console.log('ComponentDidUpdate');
+            if (prevState.options.length !== this.state.options.length) {
+                var json = JSON.stringify(this.state.options);
+                localStorage.setItem('options', json);
+                console.log('Saving Data');
+            }
         }
     }, {
         key: 'componentwillUnmount',
@@ -94,7 +98,6 @@ var IndecisionApp = function (_React$Component) {
                     handlePick: this.handlePick }),
                 React.createElement(Options, {
                     options: this.state.options,
-                    hasOptions: this.state.options.length > 0,
                     handleDeleteOptions: this.handleDeleteOptions,
                     handleDeleteOption: this.handleDeleteOption
                 }),
@@ -152,8 +155,7 @@ var Options = function Options(props) {
         React.createElement(
             'button',
             {
-                onClick: props.handleDeleteOptions,
-                disabled: !props.hasOptions
+                onClick: props.handleDeleteOptions
             },
             'Remove All'
         ),

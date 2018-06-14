@@ -1,4 +1,4 @@
-//Using Local Storag
+//Using Local Storage
 class IndecisionApp extends React.Component{
     constructor(props){
         super(props);
@@ -11,10 +11,15 @@ class IndecisionApp extends React.Component{
         };
     }
     componentDidMount() {
-        console.log('ComponentDidMount');
+        console.log('fetching data');
     }
     componentDidUpdate(prevProps, prevState) {
-        console.log('ComponentDidUpdate');
+        if(prevState.options.length !== this.state.options.length){
+            const json = JSON.stringify(this.state.options);
+            localStorage.setItem('options', json);
+            console.log('Saving Data');
+        }
+        
     }
     componentwillUnmount(){
         console.log('componentWillunmount');
@@ -54,7 +59,6 @@ class IndecisionApp extends React.Component{
                         handlePick = {this.handlePick}/>
                 <Options 
                     options={this.state.options}
-                    hasOptions={this.state.options.length > 0}
                     handleDeleteOptions={this.handleDeleteOptions}
                     handleDeleteOption = {this.handleDeleteOption}
                     />
@@ -99,7 +103,6 @@ const Options = (props) => {
         <div className="options">
             <button 
                 onClick={props.handleDeleteOptions}
-                disabled={!props.hasOptions}
             >
                 Remove All
             </button>
