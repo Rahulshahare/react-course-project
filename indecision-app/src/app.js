@@ -1,4 +1,4 @@
-//LifeCycle method
+//Using Local Storag
 class IndecisionApp extends React.Component{
     constructor(props){
         super(props);
