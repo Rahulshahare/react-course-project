@@ -149,7 +149,7 @@ class AddOption extends React.Component{
 }
 
 const User = (props) => {
-    console.log(props);
+   // console.log(props);
     return(
         <div>
             <p>Name: {props.name}</p>

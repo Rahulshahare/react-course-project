@@ -259,7 +259,7 @@ var AddOption = function (_React$Component6) {
 }(React.Component);
 
 var User = function User(props) {
-    console.log(props);
+    // console.log(props);
     return React.createElement(
         'div',
         null,
