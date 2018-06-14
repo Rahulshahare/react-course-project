@@ -34,7 +34,7 @@ var IndecisionApp = function (_React$Component) {
         }
     }, {
         key: 'componentDidUpdate',
-        value: function componentDidUpdate() {
+        value: function componentDidUpdate(prevProps, prevState) {
             console.log('ComponentDidUpdate');
         }
     }, {
