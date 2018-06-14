@@ -164,10 +164,13 @@ var Options = function Options(props) {
         { className: 'options' },
         React.createElement(
             'button',
-            {
-                onClick: props.handleDeleteOptions
-            },
+            { onClick: props.handleDeleteOptions },
             'Remove All'
+        ),
+        props.options.length === 0 && React.createElement(
+            'p',
+            null,
+            'Add an option first'
         ),
         props.options.map(function (option) {
             return React.createElement(Option, {

@@ -111,11 +111,10 @@ const Action = (props) => {
 const Options = (props) => {
     return(
         <div className="options">
-            <button 
-                onClick={props.handleDeleteOptions}
-            >
+            <button  onClick={props.handleDeleteOptions} >
                 Remove All
             </button>
+            {props.options.length === 0 && <p>Add an option first</p>}
             {props.options.map((option)=> 
                 <Option 
                     key={option} 
