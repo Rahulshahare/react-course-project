@@ -44,6 +44,7 @@ class IndecisionApp extends React.Component{
                         handlePick = {this.handlePick}/>
                 <Options 
                     options={this.state.options}
+                    hasOptions={this.state.options.length > 0}
                     handleDeleteOptions={this.handleDeleteOptions}/>
                 <AddOption
                 handleAddOption={this.handleAddOption}
@@ -88,7 +89,12 @@ class Options extends React.Component{
         //console.log(this.props.options.length);
         return(
             <div>
-                <button onClick={this.props.handleDeleteOptions}>Remove All</button>
+                <button 
+                    onClick={this.props.handleDeleteOptions}
+                    disabled={!this.props.hasOptions}
+                >
+                    Remove All
+                </button>
                 {this.props.options.map((option)=> <Option key={option} optionText={option}/> )}
             </div>
         );

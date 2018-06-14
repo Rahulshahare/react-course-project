@@ -69,6 +69,7 @@ var IndecisionApp = function (_React$Component) {
                     handlePick: this.handlePick }),
                 React.createElement(Options, {
                     options: this.state.options,
+                    hasOptions: this.state.options.length > 0,
                     handleDeleteOptions: this.handleDeleteOptions }),
                 React.createElement(AddOption, {
                     handleAddOption: this.handleAddOption
@@ -161,7 +162,10 @@ var Options = function (_React$Component4) {
                 null,
                 React.createElement(
                     'button',
-                    { onClick: this.props.handleDeleteOptions },
+                    {
+                        onClick: this.props.handleDeleteOptions,
+                        disabled: !this.props.hasOptions
+                    },
                     'Remove All'
                 ),
                 this.props.options.map(function (option) {
