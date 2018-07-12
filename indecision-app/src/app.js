@@ -8,3 +8,8 @@
 //persona.js
 //isAdult(18) - true or false
 // canDrink(18) true if 21
+
+import {isAdult , canDrink } from './person.js';
+
+console.log( isAdult(15));
+console.log( canDrink(25));
