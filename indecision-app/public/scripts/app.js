@@ -103,7 +103,7 @@ var IndecisionApp = function (_React$Component) {
             return React.createElement(
                 'div',
                 null,
-                React.createElement(Header, { subtitle: subtitle }),
+                React.createElement(Header, { title: title, subtitle: subtitle }),
                 React.createElement(Action, { hasOptions: this.state.options.length > 0,
                     handlePick: this.handlePick }),
                 React.createElement(Options, {
