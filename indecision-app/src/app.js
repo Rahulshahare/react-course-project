@@ -5,11 +5,8 @@
 // console.log(square(4));
 // console.log(add(100, 23));
 
-//persona.js
-//isAdult(18) - true or false
-// canDrink(18) true if 21
 
 import {isAdult , canDrink } from './person.js';
 
-console.log( isAdult(15));
+console.log( isAdult(55));
 console.log( canDrink(25));
